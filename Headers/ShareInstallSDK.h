@@ -52,14 +52,6 @@ typedef void (^getInstallCallback)(NSString *jsonStr);
 +(void)setAppKey:(NSString *)appKey withDelegate:(id)delegate WithOptions:(NSDictionary *)launchOptions;
 
 /**
- * 初始化ShareInstall SDK(appkey会从Info.plist文件中获取,在Info.plist文件中配置appKey键值对，如下：<key>com.shareinstall.APP_KEY</key>
- <string>openinstall 分配给应用的 appkey</string>)
- * @ param delegate 委托方法(getInstallParamsFromSmartInstall和 getWakeUpParamsFromSmartInstall)所在的类的对象
- * @ param launchOptions App 启动参数
- */
-+(void)initWithDelegate:(id)delegate withOptions:(NSDictionary *)launchOptions;
-
-/**
  * 处理 URL schemes
  * @ param URL 系统回调传回的URL
  * @ return bool URL是否被ShareInstall识别
@@ -81,8 +73,6 @@ typedef void (^getInstallCallback)(NSString *jsonStr);
  */
 +(void)reportRegister;
 
-////初始化免密登录功能
-//+(void)initSecretLoginWithModel:(UACustomModel *)model;
 
 @end
 
