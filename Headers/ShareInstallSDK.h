@@ -47,9 +47,10 @@ typedef void (^getInstallCallback)(NSString *jsonStr);
  * @ param launchOptions 该参数存储程序启动的原因
  * @ param delegate 委托方法(getInstallParamsFromSmartInstall和 getWakeUpParamsFromSmartInstall)所在的类的对象
  * @ param launchOptions App 启动参数
+ * @ customParams BOOl值 如只需在首次安装启动获取参数，可将customParams设置为YES，不需要则设置为NO
  * @ return void
  */
-+(void)setAppKey:(NSString *)appKey withDelegate:(id)delegate WithOptions:(NSDictionary *)launchOptions;
++(void)setAppKey:(NSString *)appKey withDelegate:(id)delegate WithOptions:(NSDictionary *)launchOptions clearCustomParams:(BOOL)customParams;
 
 /**
  * 初始化ShareInstall SDK(appkey会从Info.plist文件中获取,在Info.plist文件中配置appKey键值对，如下：<key>com.shareinstall.APP_KEY</key>
@@ -80,7 +81,6 @@ typedef void (^getInstallCallback)(NSString *jsonStr);
  * @ return void
  */
 +(void)reportRegister;
-
 
 @end
 

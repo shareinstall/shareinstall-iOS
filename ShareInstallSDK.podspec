@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name                  = "ShareInstallSDK"
-s.version               = '1.2.0'
+s.version               = '1.2.1'
 s.summary               = "shareinstall iOS SDK"
 s.description           = <<-DESC
     shareinstall iOS SDK for pod
